@@ -21,18 +21,13 @@ public class Shop {
         //Initializing Log stash
         OperationsLogs OL = new OperationsLogs();
         ArrayList Log = OL.getLog();
-        //Checking the type of a worker
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String readValue = null;
-
-        System.out.println("Type retail or manager to continue: ");
-        try {
-            readValue = br.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
+        //Initializing Managers list
+        Managers ML = new Managers();
+        ArrayList MLManagerList = ML.getManagerList();
+        //Printing names and number of Managers
+        System.out.println("How many managers are there? ");
+        System.out.println("There are " + MLManagerList.size() + " Managers");
+        System.out.println("Names " + ML.getManagerList());
         }
-
-       int WorkerIDInt = Integer.parseInt(readValue);
     }
-}
+
