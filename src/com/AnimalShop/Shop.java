@@ -1,18 +1,38 @@
 package com.AnimalShop;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
+
 
 
 public class Shop {
 
     public static void main(String[] args) {
-        //Adding cats to the shop
+        //Starting the app
+        //Initializing cats hashmap
         Cats CL = new Cats();
         HashMap<Integer,String> CatList = CL.getCatList();
-        Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("Enter your Worker ID ");
-        int n = reader.nextInt(); // Scans the next token of the input as an int.
-        
+        //Initializing lizard hashmap
+        Lizards LL = new Lizards();
+        HashMap<Integer,String> LizardList = LL.getLizardList();
+        //Initializing Log stash
+        OperationsLogs OL = new OperationsLogs();
+        ArrayList Log = OL.getLog();
+        //Checking the type of a worker
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String readValue = null;
+
+        System.out.println("Type retail or manager to continue: ");
+        try {
+            readValue = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+       int WorkerIDInt = Integer.parseInt(readValue);
     }
 }
