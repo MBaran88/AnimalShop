@@ -40,9 +40,13 @@ public class Shop {
             System.out.println("There are " + n + " Managers");
         System.out.println("Type surname and name of each Manager:");
         Scanner reader2 = new Scanner(System.in);
-        String m = reader.next();
-            reader.close();
-
+        String m = reader2.next();
+            System.out.println("Would you like to add another person?");
+        boolean cont;
+        if (cont = true){
+            reader2.next();
+        }
+        else {break;}
         System.out.println("----------------------------------------");
         //Initializing Retail Workers List
         RetailsWorkers RW = new RetailsWorkers();
