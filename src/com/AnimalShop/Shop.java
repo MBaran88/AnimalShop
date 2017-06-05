@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import java.util.Scanner;
 
 
 public class Shop {
@@ -34,8 +34,15 @@ public class Shop {
         MLManagerList.put("Kennedy","Martin");
         //Printing names and number of Managers
         System.out.println("How many managers are there?");
-        System.out.println("There are " + MLManagerList.size() + " Managers");
-        System.out.println("Names " + ML.getManagerList());
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
+        int n = reader.nextInt(); // Scans the next token of the input as an int.
+            reader.close();
+            System.out.println("There are " + n + " Managers");
+        System.out.println("Type surname and name of each Manager:");
+        Scanner reader2 = new Scanner(System.in);
+        String m = reader.next();
+            reader.close();
+
         System.out.println("----------------------------------------");
         //Initializing Retail Workers List
         RetailsWorkers RW = new RetailsWorkers();
@@ -49,7 +56,9 @@ public class Shop {
         System.out.println("How many retail workers are there?");
         System.out.println("There are " + RW.getRetailWorkerList().size() + " Retail workers");
         System.out.println("Names " + RW.getRetailWorkerList());
-    }
+
+
+        }
     }
 }
 

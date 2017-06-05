@@ -9,11 +9,11 @@ import java.util.HashMap;
  */
 public class Managers extends Main {
 
-    public HashMap<String ,Object > getManagerList() {
+    public HashMap<String ,Object> getManagerList() {
         return ManagerList;
     }
 
-    public void setManagerList(HashMap<String, Object> managerList) {
+    public void setManagerList(HashMap<String,Object> managerList) {
         ManagerList = managerList;
     }
 
