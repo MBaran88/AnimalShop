@@ -1,21 +1,18 @@
 package com.AnimalShop;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by RENT on 2017-06-05.
  */
 public class RetailsWorkers {
-    public ArrayList<String> getRetailWorkerList() {
+    public HashMap<String, Object> getRetailWorkerList() {
         return RetailWorkerList;
     }
 
-    public void setRetailWorkerList(ArrayList<String> retailWorkerList) {
+    public void setRetailWorkerList(HashMap<String, Object> retailWorkerList) {
         RetailWorkerList = retailWorkerList;
     }
 
-    ArrayList<String> RetailWorkerList = new ArrayList<String>(
-            Arrays.asList("Michael Dudikoff","Steven Seagal","Dwayne Johnson","Alexander Gustaffson","Andrew Baller")
-    );
+    private HashMap<String,Object> RetailWorkerList = new HashMap<String,Object>();
 }

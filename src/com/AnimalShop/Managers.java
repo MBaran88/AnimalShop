@@ -2,22 +2,24 @@ package com.AnimalShop;
 
 import sun.applet.Main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by RENT on 2017-06-05.
  */
 public class Managers extends Main {
-    public ArrayList<String> getManagerList() {
+
+    public HashMap<String ,Object > getManagerList() {
         return ManagerList;
     }
 
-    public void setManagerList(ArrayList<String> managerList) {
+    public void setManagerList(HashMap<String, Object> managerList) {
         ManagerList = managerList;
     }
 
-    ArrayList<String> ManagerList = new ArrayList<String>(
-            Arrays.asList("Andrew Baker","Lawrence Fishbourne","Kenneth Amber","Martin Kennedy"));
+    private HashMap<String,Object> ManagerList = new HashMap<>();
+
+
+
 
 }

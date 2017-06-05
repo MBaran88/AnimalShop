@@ -1,5 +1,7 @@
 package com.AnimalShop;
 
+import com.sun.org.apache.regexp.internal.RE;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,7 +27,11 @@ public class Shop {
         ArrayList Log = OL.getLog();
         //Initializing Managers list
         Managers ML = new Managers();
-        ArrayList MLManagerList = ML.getManagerList();
+        HashMap MLManagerList = ML.getManagerList();
+        MLManagerList.put("Baker","Andrew");
+        MLManagerList.put("Fishbourne","Lawrence");
+        MLManagerList.put("Amber","Kenneth");
+        MLManagerList.put("Kennedy","Martin");
         //Printing names and number of Managers
         System.out.println("How many managers are there?");
         System.out.println("There are " + MLManagerList.size() + " Managers");
@@ -33,7 +39,12 @@ public class Shop {
         System.out.println("----------------------------------------");
         //Initializing Retail Workers List
         RetailsWorkers RW = new RetailsWorkers();
-        ArrayList RetailWorkerList = RW.getRetailWorkerList();
+        HashMap RetailWorkerList = RW.getRetailWorkerList();
+        RetailWorkerList.put("Dudikoff","Michael");
+        RetailWorkerList.put("Seagal","Steven");
+        RetailWorkerList.put("Johnson","Dwayne");
+        RetailWorkerList.put("Gustaffson","Alexander");
+        RetailWorkerList.put("Baller","Andrew");
         //Printing names and number of Retail Workers
         System.out.println("How many retail workers are there?");
         System.out.println("There are " + RW.getRetailWorkerList().size() + " Retail workers");
