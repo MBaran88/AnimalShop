@@ -5,6 +5,7 @@ import com.sun.org.apache.regexp.internal.RE;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -28,25 +29,24 @@ public class Shop {
         //Initializing Managers list
         Managers ML = new Managers();
         HashMap MLManagerList = ML.getManagerList();
-        MLManagerList.put("Baker","Andrew");
-        MLManagerList.put("Fishbourne","Lawrence");
-        MLManagerList.put("Amber","Kenneth");
-        MLManagerList.put("Kennedy","Martin");
+        //MLManagerList.put("Baker","Andrew");
+        //MLManagerList.put("Fishbourne","Lawrence");
+        //MLManagerList.put("Amber","Kenneth");
+        //MLManagerList.put("Kennedy","Martin");
         //Printing names and number of Managers
         System.out.println("How many managers are there?");
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         int n = reader.nextInt(); // Scans the next token of the input as an int.
-            reader.close();
-            System.out.println("There are " + n + " Managers");
+        System.out.println("There are " + n + " Managers");
         System.out.println("Type surname and name of each Manager:");
         Scanner reader2 = new Scanner(System.in);
         String m = reader2.next();
-            System.out.println("Would you like to add another person?");
-        boolean cont;
-        if (cont = true){
-            reader2.next();
+        while (reader2.hasNext()){
+            MLManagerList.put(Stringv);
         }
-        else {break;}
+
+
+
         System.out.println("----------------------------------------");
         //Initializing Retail Workers List
         RetailsWorkers RW = new RetailsWorkers();
